@@ -43,6 +43,14 @@
     transition: .5s;
 }
 
+.navbar-toggler {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: #FF914A;
+}
+
 .navbar-nav .nav-link:hover {
     color: #FF914A;
 }

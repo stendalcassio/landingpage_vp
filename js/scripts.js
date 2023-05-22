@@ -1,8 +1,20 @@
+let images = ['img/apple.png', 'img/apple_2.png', 'img/bga.png', 'img/bga2.jpg', 'img/ipad.png']; // Lista de caminhos das imagens
+let currentIndex = 0; // Índice da imagem atual
 
-function backToTop() {
-    document.body.scrollTop = 0; // Para navegadores da web
-    document.documentElement.scrollTop = 0; // Para navegadores Chrome, Firefox, IE e Opera
+function changeImage() {
+  let imageElement = document.getElementById('background-header');
+  imageElement.src = images[currentIndex]; // Define o caminho da imagem atual
+  
+  currentIndex++; // Avança para a próxima imagem
+  
+  // Se chegarmos ao fim da lista, voltamos ao início
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
   }
+}
+
+setInterval(changeImage, 5000); // Executa a função changeImage a cada 3 segundos
+
 
 
 (function () {
@@ -30,11 +42,11 @@ function backToTop() {
       // Enviar o e-mail usando o EmailJS
       emailjs.send('gmailMessage', 'template_y39bg3f', params)
         .then(function () {
-          console.log('O e-mail foi enviado com sucesso!');
+          alert('O e-mail foi enviado com sucesso!');
           // Limpar os campos do formulário após o envio
           document.getElementById('contactForm').reset();
         }, function (error) {
-          console.log('Ocorreu um erro ao enviar o e-mail:', error);
+          alert('Ocorreu um erro ao enviar o e-mail:', error);
         });
     });
   })();
