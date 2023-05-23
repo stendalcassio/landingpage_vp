@@ -226,13 +226,13 @@
     margin: .6em;
     text-transform: uppercase;
     font-family: Lexend Deca;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .block-services img {
-    width: 200px;
-    height: 250px;
-    margin-top: 2em;
+    width: 250px;
+    height: 300px;
+
     align-items: center;
     margin-bottom: 1em;
 }
@@ -652,27 +652,41 @@
     color: #000000;
  }
 
- /* back on top */
 
- #back-to-top-btn {
-    display: none; /* Inicialmente oculto */
+  .whatsapp-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    z-index: 9999;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
     font-size: 24px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-  }
-  
-  #back-to-top-btn:hover {
-    opacity: 1;
-  }
+    line-height: 60px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    transition: .5s;
+}
+
+.whatsapp-button:hover {
+    background-color: #0faf49;
+}
+
+.banner {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #FFC107;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
   
 
 /* Responsivo */
