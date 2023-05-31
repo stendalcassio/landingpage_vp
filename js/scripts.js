@@ -16,6 +16,24 @@ function changeImage() {
 setInterval(changeImage, 5000); // Executa a função changeImage a cada 3 segundos
 
 
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("cards-style");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Altera o slide a cada 3 segundos (3000ms)
+}
+
+
 
 (function () {
     // Configurar EmailJS
